@@ -26,7 +26,7 @@
     <a href="#footer">Contact</a>
   </div>
   <div class="nav-right">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -138,7 +138,7 @@
           <span class="event-tag" style="background:rgba(0,200,255,.15);color:var(--accent);">FEATURED</span>
         </div>
         <h3>Batangas AI and Cybersecurity Congress 2025</h3>
-        <p>48-hour hackathon where teams design and prototype real-world engineering solutions.</p>
+        <p>One-day inter-school congress uniting young tech enthusiasts to explore AI, cybersecurity, and digital transformation.</p>
         <div class="event-location"><span>Location:</span><span>UB Auditorium</span></div>
       </div>
 
@@ -168,20 +168,6 @@
         <p>The wait is over — the CPESS family is kicking off the school year together!</p>
         <div class="event-location"><span>Location:</span><span>Multimedia Center 2 (D-501)</span></div>
       </div>
-
-      <!-- <div class="card event-card" onclick="openModal('career')">
-        <div class="event-header">
-          <div class="event-date-box">
-            <div class="event-date-month">Jun</div>
-            <div class="event-date-day">20</div>
-          </div>
-          <span class="event-tag" style="background:rgba(244,162,97,.15);color:#f4a261;">OUTREACH</span>
-        </div>
-        <h3>Blood Donation Drive 2026</h3>
-        <p>Industry talks, portfolio reviews, and networking with engineers from top tech companies.</p>
-        <div class="event-location"><span>Location:</span><span>Main Conference Hall</span></div>
-      </div> -->
-
     </div>
   </div>
 </section>
@@ -193,7 +179,7 @@
     <h2 class="section-title">Our Officers</h2>
     <div class="officers-grid">
       <div class="card officer-card">
-        <img class="pic-size" src="images/officers/rica.svg">
+        <img class="pic-size" src="images/officers/rica.svg" draggable="false">
         <h3>Rica Paulyn Barredo</h3>
         <div class="officer-position" style="color:var(--accent);">President</div>
       </div>
@@ -385,7 +371,6 @@
           <span class="logo-text">CPESS<span>UBat</span></span>
         </a>
         <p>Computer Engineering Student Society — University of Batangas.</p>
-
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -533,7 +518,7 @@
     <div class="modal-header">
       <div>
         <span class="modal-event-tag" style="background:rgba(69,123,157,.15);color:#457b9d;">ASSEMBLY</span>
-        <h2 class="modal-title">General Assembly — SY 2025-26</h2>
+        <h2 class="modal-title">General Assembly S.Y. 2025-26</h2>
         <div class="modal-meta">
           <span>Aug 20, 2025</span>
           <span>Multimedia Center 2 (D-501)</span>
@@ -547,9 +532,7 @@
       </p>
       <div class="modal-highlights">
         <span class="modal-highlight-pill">Year plan reveal</span>
-        <span class="modal-highlight-pill">Committee elections</span>
         <span class="modal-highlight-pill">Open forum</span>
-        <span class="modal-highlight-pill">Awarding</span>
       </div>
       <div style="margin-top:28px;">
         <div class="gallery-label">// Event Gallery</div>
@@ -574,61 +557,6 @@
           </div>
           <div class="gallery-thumb" onclick="selectPhoto('assembly',4,'https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/536267410_1149801450538121_7295999059678406108_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHvjN5b8fzIhD9TBeFOSRu76ypljt24ORLrKmWO3bg5EmVufe4gzvaqRiFuH71trlFsy4SeGX9BSlLRadM-k6x4&_nc_ohc=acpkFhC9yYcQ7kNvwEv6b10&_nc_oc=AdoPGZgX5rJZdZo85gkgHb9TqGniGkSMJ5syY2rNImSZE-R7SeMFgqarI0_cDgLYM48&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=TW05XRaic940eIy7oGifDQ&_nc_ss=7a3a8&oh=00_Af2o_KjAR4ddD46cqaFgrlpatvoJC_hemk1Y77WXCzzydg&oe=69EEA28C')">
             <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/536267410_1149801450538121_7295999059678406108_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHvjN5b8fzIhD9TBeFOSRu76ypljt24ORLrKmWO3bg5EmVufe4gzvaqRiFuH71trlFsy4SeGX9BSlLRadM-k6x4&_nc_ohc=acpkFhC9yYcQ7kNvwEv6b10&_nc_oc=AdoPGZgX5rJZdZo85gkgHb9TqGniGkSMJ5syY2rNImSZE-R7SeMFgqarI0_cDgLYM48&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=TW05XRaic940eIy7oGifDQ&_nc_ss=7a3a8&oh=00_Af2o_KjAR4ddD46cqaFgrlpatvoJC_hemk1Y77WXCzzydg&oe=69EEA28C" alt="Assembly 5" loading="lazy"/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal: Career Summit -->
-<div class="modal-overlay" id="modal-career" onclick="handleOverlayClick(event, 'career')">
-  <div class="modal">
-    <div class="modal-header">
-      <div>
-        <span class="modal-event-tag" style="background:rgba(244,162,97,.15);color:#f4a261;">CAREER</span>
-        <h2 class="modal-title">CE Career Summit 2025</h2>
-        <div class="modal-meta">
-          <span>June 20, 2025</span>
-          <span>Main Conference Hall</span>
-          <span>8:00 AM – 5:00 PM</span>
-        </div>
-      </div>
-      <button class="modal-close" onclick="closeModal('career')">✕</button>
-    </div>
-    <div class="modal-body">
-      <p class="modal-desc">
-        Annual career development summit connecting CE students with engineers and recruiters from leading tech firms. Features panel talks, portfolio and resume reviews, mock interviews, and a networking fair. A must-attend for graduating and pre-graduating students.
-      </p>
-      <div class="modal-highlights">
-        <span class="modal-highlight-pill">10+ companies</span>
-        <span class="modal-highlight-pill">Resume reviews</span>
-        <span class="modal-highlight-pill">Industry panels</span>
-        <span class="modal-highlight-pill">Networking fair</span>
-      </div>
-      <div style="margin-top:28px;">
-        <div class="gallery-label">// Event Gallery</div>
-        <div class="gallery-main" id="main-career">
-          <div class="gallery-placeholder">
-            <div class="gallery-placeholder-icon">🖼️</div>
-            <div class="gallery-placeholder-text">SELECT A PHOTO BELOW</div>
-          </div>
-        </div>
-        <div class="gallery-thumbs" id="thumbs-career">
-          <div class="gallery-thumb" onclick="selectPhoto('career',0,'https://picsum.photos/seed/car1/820/460')">
-            <img src="https://picsum.photos/seed/car1/160/112" alt="Career Summit 1" loading="lazy"/>
-          </div>
-          <div class="gallery-thumb" onclick="selectPhoto('career',1,'https://picsum.photos/seed/car2/820/460')">
-            <img src="https://picsum.photos/seed/car2/160/112" alt="Career Summit 2" loading="lazy"/>
-          </div>
-          <div class="gallery-thumb" onclick="selectPhoto('career',2,'https://picsum.photos/seed/car3/820/460')">
-            <img src="https://picsum.photos/seed/car3/160/112" alt="Career Summit 3" loading="lazy"/>
-          </div>
-          <div class="gallery-thumb" onclick="selectPhoto('career',3,'https://picsum.photos/seed/car4/820/460')">
-            <img src="https://picsum.photos/seed/car4/160/112" alt="Career Summit 4" loading="lazy"/>
-          </div>
-          <div class="gallery-thumb" onclick="selectPhoto('career',4,'https://picsum.photos/seed/car5/820/460')">
-            <img src="https://picsum.photos/seed/car5/160/112" alt="Career Summit 5" loading="lazy"/>
           </div>
         </div>
       </div>

@@ -1,14 +1,22 @@
  /* ===========================
      THEME TOGGLE
   =========================== */
+
+  
   const html = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
 
   function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-    localStorage.setItem('cpess-theme', theme);
+  html.setAttribute('data-theme', theme);
+  if (theme === 'dark') {
+    themeToggle.className = 'theme-toggle bi bi-sun-fill'; 
+    themeToggle.style.color = "white";
+  } else {
+    themeToggle.className = 'theme-toggle bi bi-moon-fill'; 
+    themeToggle.style.color = "black";
   }
+  localStorage.setItem('cpess-theme', theme);
+}
 
   themeToggle.addEventListener('click', () => {
     const current = html.getAttribute('data-theme');
@@ -135,3 +143,4 @@
     const thumbs = document.querySelectorAll('#thumbs-' + eventId + ' .gallery-thumb');
     thumbs.forEach((t, i) => t.classList.toggle('active', i === thumbIdx));
   }
+

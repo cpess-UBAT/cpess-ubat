@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CPESS UBat — Computer Engineering Student Society</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="icon/cpess-favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="logo">
+    <div class="logo-icon"><img src="images/cpess-logo.png" alt=""></div>
+    <span class="logo-text">CPESS<span>UBat</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="#home" class="active">Home</a>
+    <a href="#featured">About</a>
+    <a href="#events">Events</a>
+    <a href="#officers">Officers</a>
+    <a href="#advisers">Advisers</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#footer">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#featured" onclick="closeMenu()">About</a>
+  <a href="#events" onclick="closeMenu()">Events</a>
+  <a href="#officers" onclick="closeMenu()">Officers</a>
+  <a href="#advisers" onclick="closeMenu()">Advisers</a>
+  <a href="#faqs" onclick="closeMenu()">FAQs</a>
+  <a href="#footer" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-circuit"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span class="hero-badge-text">S.Y. 2025 - 2026 | Active</span>
+    </div>
+    <h1 class="hero-title">
+      Computer<br>
+      <span class="accent">Engineering</span>,<br>
+      Students' <span class="outline">Society</span>.
+    </h1>
+    <p class="hero-mono"><span style="color:var(--accent)">$</span> cpess --mission "Empowering CpE Students"<span class="cursor">_</span></p>
+    <p class="hero-desc">Computer Engineering Students' Society — University of Batangas. Empowering the future: Innovate, Integrate, Elevate with Computer Engineering.</p>
+    <div class="hero-btns">
+      <a href="#events" class="btn-primary">View Events</a>
+      <a href="#officers" class="btn-outline">Meet the Team</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">140+</div>
+        <div class="hero-stat-label">// members</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">31st</div>
+        <div class="hero-stat-label">// year running</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">1995</div>
+        <div class="hero-stat-label">// made in</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / FEATURES -->
+<section id="featured">
+  <div class="section-inner">
+    <p class="section-label">Why Computer Engineering?</p>
+    <h2 class="section-title">Career Opportunities</h2>
+    <div class="features-grid">
+      <div class="card feature-card">
+        <div class="feature-num">01</div>
+        <h3>SOFTWARE ENGINEER</h3>
+        <p>Designs, builds, and maintains software applications and systems.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-num">02</div>
+        <h3>HARDWARE SYSTEM ENGINEER</h3>
+        <p>Develops and manages physical computer components and integrated hardware systems.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-num">03</div>
+        <h3>NETWORK ENGINEER</h3>
+        <p>Sets up, configures, and maintains computer networks to ensure reliable communication.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-num">04</div>
+        <h3>WEB DEVELOPER</h3>
+        <p>Creates and manages websites and web applications.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-num">05</div>
+        <h3>SOFTWARE SECURITY ENGINEER</h3>
+        <p>Protects software systems from cyber threats by finding and fixing vulnerabilities.</p>
+      </div>
+      <div class="card feature-card">
+        <div class="feature-num">06</div>
+        <h3>GAME DEVELOPER</h3>
+        <p>Designs and develops video games, including gameplay, graphics, and mechanics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-inner">
+    <p class="section-label">What's On</p>
+    <h2 class="section-title">Events & Activities</h2>
+    
+      <div class="card event-card event-featured" onclick="openModal('circuit')">
+        <div class="event-header">
+          <div class="event-date-box">
+            <div class="event-date-month">Nov</div>
+            <div class="event-date-day">7</div>
+          </div>
+          <span class="event-tag" style="background:rgba(0,200,255,.15);color:var(--accent);">FEATURED</span>
+        </div>
+        <h3>Batangas AI and Cybersecurity Congress 2025</h3>
+        <p>One-day inter-school congress uniting young tech enthusiasts to explore AI, cybersecurity, and digital transformation.</p>
+        <div class="event-location"><span>Location:</span><span>UB Auditorium</span></div>
+      </div>
+
+    <div class="events-grid">
+      <div class="card event-card" onclick="openModal('techfest')">
+        <div class="event-header">
+          <div class="event-date-box">
+            <div class="event-date-month">Sept</div>
+            <div class="event-date-day">19</div>
+          </div>
+          <span class="event-tag" style="background:rgba(42,157,143,.15);color:#2a9d8f;">EXPERIENCE</span>
+        </div>
+        <h3>Teambuilding 2025</h3>
+        <p>In the spirit of teamwork and collaboration, the Computer Engineering Students Society (CPESS) will hold the annual team building with the theme “Game of Teams: Claiming Victory Together”</p>
+        <div class="event-location"><span>Location:</span><span>RM Nature Park, Cuenca, Batangas</span></div>
+      </div>
+
+      <div class="card event-card" onclick="openModal('assembly')">
+        <div class="event-header">
+          <div class="event-date-box">
+            <div class="event-date-month">Aug</div>
+            <div class="event-date-day">20</div>
+          </div>
+          <span class="event-tag" style="background:rgba(69,123,157,.15);color:#457b9d;">ASSEMBLY</span>
+        </div>
+        <h3>General Assembly 2025</h3>
+        <p>The wait is over — the CPESS family is kicking off the school year together!</p>
+        <div class="event-location"><span>Location:</span><span>Multimedia Center 2 (D-501)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICERS -->
+<section id="officers">
+  <div class="section-inner">
+    <p class="section-label">The Team</p>
+    <h2 class="section-title">Our Officers</h2>
+    <div class="officers-grid">
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/rica.svg" data-hover="images/officers/rica0.svg" draggable="false">
+        <h3>Rica Paulyn Barredo</h3>
+        <div class="officer-position" style="color:var(--accent);">President</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/niña.svg" draggable="false">
+        <h3>Niña Kristal Malaluan</h3>
+        <div class="officer-position" style="color:#f4a261;">VP — Internal</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/lei.svg" draggable="false">
+        <h3>Lei Allizter Cervantes</h3>
+        <div class="officer-position" style="color:#f4a261;">VP — External</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/gane.svg" draggable="false">
+        <h3>Gane Mikaela Bacay</h3>
+        <div class="officer-position" style="color:#2a9d8f;">Secretary</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/jyenn.svg" draggable="false">
+        <h3>Jyenn Lee Cabrera</h3>
+        <div class="officer-position" style="color:#457b9d;">Treasurer</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/madeline.svg" draggable="false">
+        <h3>Madeline Dela Torre</h3>
+        <div class="officer-position" style="color:#457b9d;">Asst. Treasurer</div>
+      </div>
+
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/alejandro.svg" draggable="false">
+        <h3>Alejandro Miguel Sandoval</h3>
+        <div class="officer-position" style="color:#e76f51;">Auditor</div>
+      </div>
+
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/brian.svg" draggable="false">
+        <h3>Brian Justine Cuenca</h3>
+        <div class="officer-position" style="color:#8338ec;">PRO 1</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/gian.svg" draggable="false">
+        <h3>Gian Alexis Montalbo</h3>
+        <div class="officer-position" style="color:#8338ec;">PRO 2</div>
+      </div>
+
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/gwyneth.svg" draggable="false">
+        <h3>Gwyneth Cepillo</h3>
+        <div class="officer-position" style="color:#67b02c;">Extensions Committee</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/lorryne.svg" draggable="false">
+        <h3>Lorryne Julia Rosima</h3>
+        <div class="officer-position" style="color:#67b02c;">Educational Committee</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/mac.svg" draggable="false">
+        <h3>Mac Xiaobin Villacrusis</h3>
+        <div class="officer-position" style="color:#67b02c;">Sports Committee</div>
+      </div>
+
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/renn.svg" draggable="false">
+        <h3>Renn Christian Zeous Visco</h3>
+        <div class="officer-position" style="color:#b02c65;">4th Year Representative</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/allan.svg" draggable="false">
+        <h3>Allan Justine Castromero</h3>
+        <div class="officer-position" style="color:#b02c65;"><span>//</span>3rd Year Representative</div>
+      </div>      
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/janikka.svg" draggable="false">
+        <h3>Janikka Aira Bulan</h3>
+        <div class="officer-position" style="color:#b02c65;">2nd Year Representative</div>
+      </div>
+
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/alexa.svg" draggable="false">
+        <h3>Alexa Perez</h3>
+        <div class="officer-position" style="color:#8c520b;">Muse</div>
+      </div>
+      <div class="card officer-card">
+        <img class="pic-size" src="images/officers/glenniel.svg" draggable="false">
+        <h3>Glenniel Nuñez</h3>
+        <div class="officer-position" style="color:#8c520b;">Escort</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADVISERS -->
+<section id="advisers">
+  <div class="section-inner">
+    <p class="section-label">Guidance</p>
+    <h2 class="section-title">Our Advisers</h2>
+    <div class="advisers-grid">
+      <div class="card adviser-card">
+        <div>
+          <img src="images/professors/drleni.svg" draggable="false" class="pic-size">
+        </div>
+        <div>
+          <h3>Dr. Leni Bulan</h3>
+          <div class="adviser-dept">Associate Dean</div>
+          <span class="adviser-badge">Adviser since 1995</span>
+        </div>
+      </div>
+
+      <div class="card adviser-card">
+        <div>
+          <img src="images/professors/engrliza.svg" draggable="false" class="pic-size">
+        </div>
+        <div>
+          <h3>Engr. Liza Maderazo</h3>
+          <div class="adviser-dept">Adviser</div>
+          <span class="adviser-badge">Adviser since 2007</span>
+        </div>
+      </div>
+
+      <div class="card adviser-card">
+        <div>
+          <img src="images/professors/engrpablo.svg" draggable="false" class="pic-size">
+        </div>
+        <div>
+          <h3>Engr. Pablo Asi</h3>
+          <div class="adviser-dept">Program Head</div>
+          <span class="adviser-badge">Adviser since </span>
+        </div>
+      </div>
+
+      <div class="card adviser-card">
+        <div>
+          <img src="images/professors/engrjohnderrick.svg" draggable="false" class="pic-size">
+        </div>
+        <div>
+          <h3>Engr. John Derrick Ramos</h3>
+          <div class="adviser-dept">Adviser</div>
+          <span class="adviser-badge">Adviser since 2021</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQs -->
+<section id="faqs">
+  <div class="section-inner">
+    <div class="faq-wrap">
+      <p class="section-label">Got Questions?</p>
+      <h2 class="section-title">Frequently Asked</h2>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>What is Computer Engineering?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">Computer engineering is the branch of engineering that integrates electronics engineering with computer sciences. Computer Engineers design and develop computer systems and other technological devices.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h3>Why choose Computer Engineering?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">You can have multiple job opportunities. It opens opportunities for high salary jobs. It challenges you because of the rapid growth of technology. You can express your creativity and innovation. You have limitless future opportunities.
+      </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner">
+    <h2>Still a work in progress…</h2>
+    <p>We’re laying the digital bricks one by one, and the blueprint is bigger than you think. More content, more features, and more surprises are on the way… stick around, the best chapters haven’t even been written yet.</p>
+    <a href="#footer" class="btn-outline">Get in Touch</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <div class="logo-icon"><img src="images/cpess-logo.png" alt=""></div>
+          <span class="logo-text">CPESS<span>UBat</span></span>
+        </a>
+        <p>Computer Engineering Student Society — University of Batangas.<span style="color:var(--accent)"> v1.1.0 </span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="#home">Home</a>
+        <a href="#featured">About</a>
+        <a href="#events">Events</a>
+        <a href="#officers">Officers</a>
+        <a href="#advisers">Advisers</a>
+        <a href="#faqs">FAQs</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">cpessub@ub.edu.ph</div>
+        <div class="footer-contact-item">University of Batangas</div>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social-item">
+          <div class="footer-social-platform">Facebook</div>
+          <div class="footer-social-handle"><a href="https://www.facebook.com/cpessUB">CPESS Ubat</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CPESS UBat — Computer Engineering Students' Society</p>
+      <p>Made by Engr. Montalbo (2027)</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===========================
+     EVENT MODALS
+=========================== -->
+
+<!-- Modal: Circuit Breaker Hackathon -->
+<div class="modal-overlay" id="modal-circuit" onclick="handleOverlayClick(event, 'circuit')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <span class="modal-event-tag" style="background:rgba(0,200,255,.15);color:var(--accent);">FEATURED</span>
+        <h2 class="modal-title">Batangas AI and Cybersecurity Congress 2025</h2>
+        <div class="modal-meta">
+          <span>November 7, 2025</span>
+          <span>UB Auditorium</span>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeModal('circuit')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">
+        This one-day congress brings together students to explore the latest breakthroughs, challenges, and ethical implications in the world of Artificial Intelligence and Cybersecurity.
+      </p>
+      <div class="modal-highlights">
+        <span class="modal-highlight-pill">Industry mentors</span>
+        <span class="modal-highlight-pill">Certificates</span>
+      </div>
+      <div style="margin-top:28px;">
+        <div class="gallery-label">// Event Gallery</div>
+        <div class="gallery-main" id="main-circuit">
+          <div class="gallery-placeholder">
+            <div class="gallery-placeholder-icon">🖼️</div>
+            <div class="gallery-placeholder-text">SELECT A PHOTO BELOW</div>
+          </div>
+        </div>
+        <div class="gallery-thumbs" id="thumbs-circuit">
+          <div class="gallery-thumb" onclick="selectPhoto('circuit',0,'https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/578706887_1214604334057832_1836250501532668930_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGnncZxHr4Bw6-t89X9EdE9B4vCQDTPyGQHi8JANM_IZHe0sDyAD508TLOXyuP0s27vdJOEGJ495U1kCfjukCz7&_nc_ohc=ZVbpLxWMJ10Q7kNvwGSuT3a&_nc_oc=Adpn4lN3ba4siyuKyNoME9TlpELPVIu2j2aNenB6pjvh0PCd76ia9aMcKpE3jqQXybw&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=FThbUmd5zXfy4BqFbTsB6w&_nc_ss=7a3a8&oh=00_Af27v1hSdROEM37Rmtx6aKKjfrCQ3imtGSbnNesKhJpAiw&oe=69EE0988')">
+            <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/578706887_1214604334057832_1836250501532668930_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGnncZxHr4Bw6-t89X9EdE9B4vCQDTPyGQHi8JANM_IZHe0sDyAD508TLOXyuP0s27vdJOEGJ495U1kCfjukCz7&_nc_ohc=ZVbpLxWMJ10Q7kNvwGSuT3a&_nc_oc=Adpn4lN3ba4siyuKyNoME9TlpELPVIu2j2aNenB6pjvh0PCd76ia9aMcKpE3jqQXybw&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=FThbUmd5zXfy4BqFbTsB6w&_nc_ss=7a3a8&oh=00_Af27v1hSdROEM37Rmtx6aKKjfrCQ3imtGSbnNesKhJpAiw&oe=69EE0988" alt="BACC2025 photo 1" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('circuit',1,'https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/578261078_1214608810724051_4967689221635928043_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGg0xIb1OkfKLt2ECSeBOh5OO7kFAPekfc47uQUA96R9zCX8Ssc5cboNSraw8M_r6eszSg9gDUXltpj_0EUe9zz&_nc_ohc=6LTgKIcDSLEQ7kNvwGF7Hw2&_nc_oc=AdqPDPV_SwZvA81NKIrF-YKB7-i3OrBfG3tBFgOFJyOB4TGdr9x2YevKhWvAW78V01Y&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=L3PYAvzoDchNpM46ST3THQ&_nc_ss=7a3a8&oh=00_Af1WITuqkDf2HtsOJzsHNN20_MjKJyM2jaZ4Pax7KGIGtg&oe=69EE81AE')">
+            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/578261078_1214608810724051_4967689221635928043_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGg0xIb1OkfKLt2ECSeBOh5OO7kFAPekfc47uQUA96R9zCX8Ssc5cboNSraw8M_r6eszSg9gDUXltpj_0EUe9zz&_nc_ohc=6LTgKIcDSLEQ7kNvwGF7Hw2&_nc_oc=AdqPDPV_SwZvA81NKIrF-YKB7-i3OrBfG3tBFgOFJyOB4TGdr9x2YevKhWvAW78V01Y&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=L3PYAvzoDchNpM46ST3THQ&_nc_ss=7a3a8&oh=00_Af1WITuqkDf2HtsOJzsHNN20_MjKJyM2jaZ4Pax7KGIGtg&oe=69EE81AE" alt="BACC2025 photo 2" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('circuit',2,'https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/577401514_1214611600723772_2839012356303819975_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHPvkzVqGQvI0vG_8yGcJ1JfP5WGw6-5S58_lYbDr7lLieJwwtoe7Mg4gpu03nr4Rr2NPadG3IhXUMgNXvKfWNv&_nc_ohc=tXHOFWunYIMQ7kNvwEwNc6c&_nc_oc=AdqVad1LdKOl001anZlsJQ9IVDDOEhb0JMDeAW-XvkWY6W_YCGn4yR7yI8ZcaTfgdsI&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=gySL-74sjTbXP35PFyd9-w&_nc_ss=7a3a8&oh=00_Af3x2M8q680QHyMi4TpaUd6Jce3HSLcSVRsSYojaD_ZISA&oe=69EE8E7C')">
+            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/577401514_1214611600723772_2839012356303819975_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHPvkzVqGQvI0vG_8yGcJ1JfP5WGw6-5S58_lYbDr7lLieJwwtoe7Mg4gpu03nr4Rr2NPadG3IhXUMgNXvKfWNv&_nc_ohc=tXHOFWunYIMQ7kNvwEwNc6c&_nc_oc=AdqVad1LdKOl001anZlsJQ9IVDDOEhb0JMDeAW-XvkWY6W_YCGn4yR7yI8ZcaTfgdsI&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=gySL-74sjTbXP35PFyd9-w&_nc_ss=7a3a8&oh=00_Af3x2M8q680QHyMi4TpaUd6Jce3HSLcSVRsSYojaD_ZISA&oe=69EE8E7C" alt="BACC2025 photo 3" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('circuit',3,'https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/577875924_1214611507390448_6965298915594842810_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeG5TcYimAAZp6yKOVlhSQ9uK7oA5hglkFUrugDmGCWQVQjdAH3XbVAzZ1iwGiZwVNjc7LkKW1VJ6V61yGMB-Rwv&_nc_ohc=o7VfQoGYHRkQ7kNvwE8_iMw&_nc_oc=Adpu8unzOkIK4YTVpd0YNDc6D37shdOXtWYuGcssQ27YC9zMbS-KRvx1vfl5t3ZGclY&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=vWVyzsraYltvIe9eQUcSyQ&_nc_ss=7a3a8&oh=00_Af28KTTC6lSS9CBIlOYturgNCK8g7_sCWaH9x7tynUVDfw&oe=69EEA30E')">
+            <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/577875924_1214611507390448_6965298915594842810_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeG5TcYimAAZp6yKOVlhSQ9uK7oA5hglkFUrugDmGCWQVQjdAH3XbVAzZ1iwGiZwVNjc7LkKW1VJ6V61yGMB-Rwv&_nc_ohc=o7VfQoGYHRkQ7kNvwE8_iMw&_nc_oc=Adpu8unzOkIK4YTVpd0YNDc6D37shdOXtWYuGcssQ27YC9zMbS-KRvx1vfl5t3ZGclY&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=vWVyzsraYltvIe9eQUcSyQ&_nc_ss=7a3a8&oh=00_Af28KTTC6lSS9CBIlOYturgNCK8g7_sCWaH9x7tynUVDfw&oe=69EEA30E" alt="BACC2025 photo 4" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('circuit',4,'https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/578504463_1214615897390009_7624874411011355287_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeF_pxtOh9MH0S85rBD7IB2O1YzMf9t0zyzVjMx_23TPLIW61vXm2WblYjeYXeSfAGOzVJ58N0KxEOnWokBJEEg6&_nc_ohc=MwzNmMbqDCEQ7kNvwFgn8nn&_nc_oc=AdoqMar42_oifyF0xYDO-3ktyGyG2wwVhqUNfH9VCo-AtY2K8hXle2yhCfwkrMwEOVk&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=nrIaVHkKhkPoMhY8ceWYsA&_nc_ss=7a3a8&oh=00_Af2fxhmsSrYbaMp4kqygYtUtnpWoTqD1TT9W1uS57MYLig&oe=69EE8C37')">
+            <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/578504463_1214615897390009_7624874411011355287_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeF_pxtOh9MH0S85rBD7IB2O1YzMf9t0zyzVjMx_23TPLIW61vXm2WblYjeYXeSfAGOzVJ58N0KxEOnWokBJEEg6&_nc_ohc=MwzNmMbqDCEQ7kNvwFgn8nn&_nc_oc=AdoqMar42_oifyF0xYDO-3ktyGyG2wwVhqUNfH9VCo-AtY2K8hXle2yhCfwkrMwEOVk&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=nrIaVHkKhkPoMhY8ceWYsA&_nc_ss=7a3a8&oh=00_Af2fxhmsSrYbaMp4kqygYtUtnpWoTqD1TT9W1uS57MYLig&oe=69EE8C37" alt="BACC2025 photo 5" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('circuit',5,'https://scontent.fmnl17-8.fna.fbcdn.net/v/t39.30808-6/578703150_1214617230723209_6415423993257846540_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeH7hXJ1BAcgzWbZCiqhtVxnFYNgTH7qanQVg2BMfupqdE7wYfxdVrXXkIX-poSC8tn0vMdUcupwFvXLpO2Y0BhU&_nc_ohc=LGUpkmy3CBcQ7kNvwHhtFda&_nc_oc=AdrVmvV1ABkTyAk-tqnVpbJ0i5xAxgP279QmEVA0FICyXHcxZlo1zylUfIGf13YAfOo&_nc_zt=23&_nc_ht=scontent.fmnl17-8.fna&_nc_gid=OI8udS2tTgnOiDp7mO1wcA&_nc_ss=7a3a8&oh=00_Af0xp38nxmPQHyI0hmCd00mi1LrmZ3p_BrpQUSUb2p5JuA&oe=69EE85DE')">
+            <img src="https://scontent.fmnl17-8.fna.fbcdn.net/v/t39.30808-6/578703150_1214617230723209_6415423993257846540_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeH7hXJ1BAcgzWbZCiqhtVxnFYNgTH7qanQVg2BMfupqdE7wYfxdVrXXkIX-poSC8tn0vMdUcupwFvXLpO2Y0BhU&_nc_ohc=LGUpkmy3CBcQ7kNvwHhtFda&_nc_oc=AdrVmvV1ABkTyAk-tqnVpbJ0i5xAxgP279QmEVA0FICyXHcxZlo1zylUfIGf13YAfOo&_nc_zt=23&_nc_ht=scontent.fmnl17-8.fna&_nc_gid=OI8udS2tTgnOiDp7mO1wcA&_nc_ss=7a3a8&oh=00_Af0xp38nxmPQHyI0hmCd00mi1LrmZ3p_BrpQUSUb2p5JuA&oe=69EE85DE" alt="BACC2025 photo 6" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: TechFest -->
+<div class="modal-overlay" id="modal-techfest" onclick="handleOverlayClick(event, 'techfest')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <span class="modal-event-tag" style="background:rgba(42,157,143,.15);color:#2a9d8f;">EXPERIENCE</span>
+        <h2 class="modal-title">Beyond the Throne</h2>
+        <div class="modal-meta">
+          <span>Sept 19-20, 2025</span>
+          <span>RM Nature Park, Cuenca, Batangas</span>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeModal('techfest')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">
+        This two-day event aims to build stronger bonds, enhance leadership, and foster unity among officers and members through fun team-building games, workshops, and interactive sessions. Together, we rise beyond challenges — for in unity, we claim victory! 
+      </p>
+      <div class="modal-highlights">
+        <span class="modal-highlight-pill">Camaraderie</span>
+        <span class="modal-highlight-pill">New Friends</span>
+      </div>
+      <div style="margin-top:28px;">
+        <div class="gallery-label">// Event Gallery</div>
+        <div class="gallery-main" id="main-techfest">
+          <div class="gallery-placeholder">
+            <div class="gallery-placeholder-icon">🖼️</div>
+            <div class="gallery-placeholder-text">SELECT A PHOTO BELOW</div>
+          </div>
+        </div>
+        <div class="gallery-thumbs" id="thumbs-techfest">
+          <div class="gallery-thumb" onclick="selectPhoto('techfest',0,'https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/554342425_1176548641196735_3451359487523574316_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGlB0hKWG4F6hdx6Tbn0Zah8TzrpNta447xPOuk21rjjtp8stLi4b5remZ2_neXFuIC7CPb5jF-LyRv7V2Hk8Sg&_nc_ohc=G5hwqZCxVoAQ7kNvwEjN_St&_nc_oc=AdpxEXI1Q1r38JARo2Eam51yvrRJ4veWGAzxBSYcBMC3pYoaMC7z0UsTpKr4APGhVKM&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=PeDZeq2uT495pSu21_huzA&_nc_ss=7a3a8&oh=00_Af2LjpdSjiRuIhh5XOi4iNHzGoRH93k6qtKiSaihLM8vIQ&oe=69EEA406')">
+            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/554342425_1176548641196735_3451359487523574316_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGlB0hKWG4F6hdx6Tbn0Zah8TzrpNta447xPOuk21rjjtp8stLi4b5remZ2_neXFuIC7CPb5jF-LyRv7V2Hk8Sg&_nc_ohc=G5hwqZCxVoAQ7kNvwEjN_St&_nc_oc=AdpxEXI1Q1r38JARo2Eam51yvrRJ4veWGAzxBSYcBMC3pYoaMC7z0UsTpKr4APGhVKM&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=PeDZeq2uT495pSu21_huzA&_nc_ss=7a3a8&oh=00_Af2LjpdSjiRuIhh5XOi4iNHzGoRH93k6qtKiSaihLM8vIQ&oe=69EEA406" alt="TechFest 1" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('techfest',1,'https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/549189246_1170899501761649_6488154380278085062_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeF0dr_42xbEbSYUYwUkgS_5w0m1Ca7Fi77DSbUJrsWLvuk-CPiYxnlk5xKfgs-hUdiYi_jraqIyexJvEZ6tDigm&_nc_ohc=tGsPBFF__yIQ7kNvwEmFqgy&_nc_oc=Adpj2GNvoR6bi5aUcuw0ailbYfwKogOi8JV5UmrUSlXMVDkxgsRARfQmteKhkXaabzs&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=Sb1jF2_PzXU4KhAwkP9nmQ&_nc_ss=7a3a8&oh=00_Af2m1LL2dRORps8u9njAHNj3khGx5rfDlBzzPy_3Ml7wyA&oe=69EE794D')">
+            <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/549189246_1170899501761649_6488154380278085062_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeF0dr_42xbEbSYUYwUkgS_5w0m1Ca7Fi77DSbUJrsWLvuk-CPiYxnlk5xKfgs-hUdiYi_jraqIyexJvEZ6tDigm&_nc_ohc=tGsPBFF__yIQ7kNvwEmFqgy&_nc_oc=Adpj2GNvoR6bi5aUcuw0ailbYfwKogOi8JV5UmrUSlXMVDkxgsRARfQmteKhkXaabzs&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=Sb1jF2_PzXU4KhAwkP9nmQ&_nc_ss=7a3a8&oh=00_Af2m1LL2dRORps8u9njAHNj3khGx5rfDlBzzPy_3Ml7wyA&oe=69EE794D" alt="TechFest 2" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('techfest',2,'https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/554925335_1176548577863408_4814939081703168691_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGoTtJ2ot9JkuEgwCWSyqX7bZ4SsCUUOBxtnhKwJRQ4HDInQgT0pXhybT_cE7l9Fvd9l12Dlw2jqTH1zkcENNSW&_nc_ohc=WoZP4x4OgTwQ7kNvwGcrBg2&_nc_oc=AdqD6Mn4TQC3ptiimQeXf7IWOG-paf7qLaZz-hMi47z12z4bKeJuJHexMxo47f_SE-g&_nc_zt=23&_nc_ht=scontent.fmnl17-4.fna&_nc_gid=r5_BisuMvFTdH_H5fh9I9A&_nc_ss=7a3a8&oh=00_Af3OjDM6bF0QZuugtswRKQWE8fFnPn6QiK6opEBCCLP34g&oe=69EE8721')">
+            <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/554925335_1176548577863408_4814939081703168691_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeGoTtJ2ot9JkuEgwCWSyqX7bZ4SsCUUOBxtnhKwJRQ4HDInQgT0pXhybT_cE7l9Fvd9l12Dlw2jqTH1zkcENNSW&_nc_ohc=WoZP4x4OgTwQ7kNvwGcrBg2&_nc_oc=AdqD6Mn4TQC3ptiimQeXf7IWOG-paf7qLaZz-hMi47z12z4bKeJuJHexMxo47f_SE-g&_nc_zt=23&_nc_ht=scontent.fmnl17-4.fna&_nc_gid=r5_BisuMvFTdH_H5fh9I9A&_nc_ss=7a3a8&oh=00_Af3OjDM6bF0QZuugtswRKQWE8fFnPn6QiK6opEBCCLP34g&oe=69EE8721" alt="TechFest 3" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('techfest',3,'https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/554097187_1176553221196277_4078927183345315821_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHb686FOoSZooCnYIR2m2z0muf5dcnV6daa5_l1ydXp1us_15NVjjfqYfk6Y_QO8XdSXhmlq1tsy6-dmpNIvsWV&_nc_ohc=B_hPxJ4TofAQ7kNvwGjIFq3&_nc_oc=Adr8WjDoI7RZF4SeBNh4aOj_uJs80gRYEL5ZiNQSqvUl8-CZq5eJ0hAVYWNNPKBn8vk&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=RJgqUvtifHbBHaGtlseIFA&_nc_ss=7a3a8&oh=00_Af3mcah1QdNjT_f-UjpWCUiDS-K2z9A1aKXBg-kjmxl_Gg&oe=69EE7CF7')">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/554097187_1176553221196277_4078927183345315821_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHb686FOoSZooCnYIR2m2z0muf5dcnV6daa5_l1ydXp1us_15NVjjfqYfk6Y_QO8XdSXhmlq1tsy6-dmpNIvsWV&_nc_ohc=B_hPxJ4TofAQ7kNvwGjIFq3&_nc_oc=Adr8WjDoI7RZF4SeBNh4aOj_uJs80gRYEL5ZiNQSqvUl8-CZq5eJ0hAVYWNNPKBn8vk&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=RJgqUvtifHbBHaGtlseIFA&_nc_ss=7a3a8&oh=00_Af3mcah1QdNjT_f-UjpWCUiDS-K2z9A1aKXBg-kjmxl_Gg&oe=69EE7CF7" alt="TechFest 4" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('techfest',4,'https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/555433681_1176558554529077_8750263672795302375_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEv4ROvbFCBsJS6zDGIp2SdZ-0J4vcAsaln7Qni9wCxqYo5puPhurqg_2YdsgdOeTUHM-YdFvycq-Lbq5KTBVFv&_nc_ohc=VqWd5cMOF9gQ7kNvwHZpyKa&_nc_oc=Adp_diTI-NSpjhj954Fv5zC2-3u4QSEA62DJVdglOgJsuLWuoxCtyf3fJ2oN_P9yOak&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=dio0GOmSRDZDJJwKa35JXg&_nc_ss=7a3a8&oh=00_Af2LeUofuGgT7MIyQfp6MSozlcmwS_CooJs6pCNneByZUg&oe=69EE7CF2')">
+            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/555433681_1176558554529077_8750263672795302375_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEv4ROvbFCBsJS6zDGIp2SdZ-0J4vcAsaln7Qni9wCxqYo5puPhurqg_2YdsgdOeTUHM-YdFvycq-Lbq5KTBVFv&_nc_ohc=VqWd5cMOF9gQ7kNvwHZpyKa&_nc_oc=Adp_diTI-NSpjhj954Fv5zC2-3u4QSEA62DJVdglOgJsuLWuoxCtyf3fJ2oN_P9yOak&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=dio0GOmSRDZDJJwKa35JXg&_nc_ss=7a3a8&oh=00_Af2LeUofuGgT7MIyQfp6MSozlcmwS_CooJs6pCNneByZUg&oe=69EE7CF2" alt="TechFest 5" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: General Assembly -->
+<div class="modal-overlay" id="modal-assembly" onclick="handleOverlayClick(event, 'assembly')">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <span class="modal-event-tag" style="background:rgba(69,123,157,.15);color:#457b9d;">ASSEMBLY</span>
+        <h2 class="modal-title">General Assembly S.Y. 2025-26</h2>
+        <div class="modal-meta">
+          <span>Aug 20, 2025</span>
+          <span>Multimedia Center 2 (D-501)</span>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeModal('assembly')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">
+        The official semester kick-off for all CPESS UBat members. The agenda includes the presentation of the SY 2025-26 officers, year plan and project proposals, committee formation, and open forum. Active attendance is required for all registered members.
+      </p>
+      <div class="modal-highlights">
+        <span class="modal-highlight-pill">Year plan reveal</span>
+        <span class="modal-highlight-pill">Open forum</span>
+      </div>
+      <div style="margin-top:28px;">
+        <div class="gallery-label">// Event Gallery</div>
+        <div class="gallery-main" id="main-assembly">
+          <div class="gallery-placeholder">
+            <div class="gallery-placeholder-icon">🖼️</div>
+            <div class="gallery-placeholder-text">SELECT A PHOTO BELOW</div>
+          </div>
+        </div>
+        <div class="gallery-thumbs" id="thumbs-assembly">
+          <div class="gallery-thumb" onclick="selectPhoto('assembly',0,'https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/536139176_1147077144143885_9034572471205842669_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEkcQRvOCxqmUaPhfS0lwiyTr5TRDHiovpOvlNEMeKi-p62O1QZF1DkkKjLjnZYeUFx0HSJRVbPwDjIYcQS0ut7&_nc_ohc=EzFPnLIVZygQ7kNvwE_bHjf&_nc_oc=Adr4WNUxGXySRrQyJDCM93GKz_5OY2q9jfOOSOnmSjlD_RsgrRgwp23cYkWGfweH238&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=ATShRzBktm9zfkqm8oPTNA&_nc_ss=7a3a8&oh=00_Af30HeNUXtIyU_MctM2f0A45eVFap3r82dgy_yWchKgaLg&oe=69EE84D6')">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/536139176_1147077144143885_9034572471205842669_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeEkcQRvOCxqmUaPhfS0lwiyTr5TRDHiovpOvlNEMeKi-p62O1QZF1DkkKjLjnZYeUFx0HSJRVbPwDjIYcQS0ut7&_nc_ohc=EzFPnLIVZygQ7kNvwE_bHjf&_nc_oc=Adr4WNUxGXySRrQyJDCM93GKz_5OY2q9jfOOSOnmSjlD_RsgrRgwp23cYkWGfweH238&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=ATShRzBktm9zfkqm8oPTNA&_nc_ss=7a3a8&oh=00_Af30HeNUXtIyU_MctM2f0A45eVFap3r82dgy_yWchKgaLg&oe=69EE84D6" alt="Assembly 1" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('assembly',1,'https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/535844543_1149801573871442_4566181730139709905_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeE04NLQpohUKYIsUyVFH9QnUoF406uAks1SgXjTq4CSzYfJDNaSsyquFk51-uHgCE-iy9kkRzxMYGB_bn1B__uq&_nc_ohc=IolkikDe8u4Q7kNvwFQlxWL&_nc_oc=AdoFEQSy3FeL7qOz5VqfiBp2id8qDItF5d2TGKXgAmw8-PcqSMvN-gABTZQlM5DxNMU&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=gh5x8HEe5BaoySVc6Ap5NQ&_nc_ss=7a3a8&oh=00_Af2XOtcrOOjEWL5gkfg70XjUZE9VsRkuzcEuKDhKqU5Ong&oe=69EE77E8')">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/535844543_1149801573871442_4566181730139709905_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeE04NLQpohUKYIsUyVFH9QnUoF406uAks1SgXjTq4CSzYfJDNaSsyquFk51-uHgCE-iy9kkRzxMYGB_bn1B__uq&_nc_ohc=IolkikDe8u4Q7kNvwFQlxWL&_nc_oc=AdoFEQSy3FeL7qOz5VqfiBp2id8qDItF5d2TGKXgAmw8-PcqSMvN-gABTZQlM5DxNMU&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=gh5x8HEe5BaoySVc6Ap5NQ&_nc_ss=7a3a8&oh=00_Af2XOtcrOOjEWL5gkfg70XjUZE9VsRkuzcEuKDhKqU5Ong&oe=69EE77E8" alt="Assembly 2" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('assembly',2,'https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/536276317_1149801350538131_2455451371849670236_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFM69j-918orhVTZ58bcHJhC4b064RhEMkLhvTrhGEQyf9wnTZ3KYKgTIkozeoTbLiuGEZWcIqC72Mhbr8LtvnD&_nc_ohc=xkaN2KvAugMQ7kNvwE6hoHm&_nc_oc=AdqFENSIMil70wYuftfbc7ACcmOLaz-RAHoWjVN2F1OObfZ09puUlOr7YMm4V6v5i3k&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=aWagagNRUjM1aFR61GWZUw&_nc_ss=7a3a8&oh=00_Af2M0n3SQ6UHlO5XJoaLTPWS-gut00NTl0wpz1WmpHKxPA&oe=69EE978F')">
+            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/536276317_1149801350538131_2455451371849670236_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFM69j-918orhVTZ58bcHJhC4b064RhEMkLhvTrhGEQyf9wnTZ3KYKgTIkozeoTbLiuGEZWcIqC72Mhbr8LtvnD&_nc_ohc=xkaN2KvAugMQ7kNvwE6hoHm&_nc_oc=AdqFENSIMil70wYuftfbc7ACcmOLaz-RAHoWjVN2F1OObfZ09puUlOr7YMm4V6v5i3k&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=aWagagNRUjM1aFR61GWZUw&_nc_ss=7a3a8&oh=00_Af2M0n3SQ6UHlO5XJoaLTPWS-gut00NTl0wpz1WmpHKxPA&oe=69EE978F" alt="Assembly 3" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('assembly',3,'https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/536273486_1149801447204788_1191654752752258003_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFfYa5A7UJvMWTsC4y8s66_s_pycw_5P0ez-nJzD_k_R1EJ0ZcNCZl-hJxHN_CP0sbqxmarPJ9kzQ_KczL3E3nF&_nc_ohc=NwtGSEShxB8Q7kNvwEW9tk1&_nc_oc=AdoiQJZ4CCuUADqkGZd8W5habeu1Wcx4cGzG6tYlG0vDueCB8PLw5bGJU8YExG6azCI&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=XG1rUq1aONrC6iDddbjglw&_nc_ss=7a3a8&oh=00_Af1ooefu7cs9ffYBFuBGqxnim_zHbtF9w8DwX1wwj57ExQ&oe=69EE7DAC')">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/536273486_1149801447204788_1191654752752258003_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFfYa5A7UJvMWTsC4y8s66_s_pycw_5P0ez-nJzD_k_R1EJ0ZcNCZl-hJxHN_CP0sbqxmarPJ9kzQ_KczL3E3nF&_nc_ohc=NwtGSEShxB8Q7kNvwEW9tk1&_nc_oc=AdoiQJZ4CCuUADqkGZd8W5habeu1Wcx4cGzG6tYlG0vDueCB8PLw5bGJU8YExG6azCI&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=XG1rUq1aONrC6iDddbjglw&_nc_ss=7a3a8&oh=00_Af1ooefu7cs9ffYBFuBGqxnim_zHbtF9w8DwX1wwj57ExQ&oe=69EE7DAC" alt="Assembly 4" loading="lazy"/>
+          </div>
+          <div class="gallery-thumb" onclick="selectPhoto('assembly',4,'https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/536267410_1149801450538121_7295999059678406108_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHvjN5b8fzIhD9TBeFOSRu76ypljt24ORLrKmWO3bg5EmVufe4gzvaqRiFuH71trlFsy4SeGX9BSlLRadM-k6x4&_nc_ohc=acpkFhC9yYcQ7kNvwEv6b10&_nc_oc=AdoPGZgX5rJZdZo85gkgHb9TqGniGkSMJ5syY2rNImSZE-R7SeMFgqarI0_cDgLYM48&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=TW05XRaic940eIy7oGifDQ&_nc_ss=7a3a8&oh=00_Af2o_KjAR4ddD46cqaFgrlpatvoJC_hemk1Y77WXCzzydg&oe=69EEA28C')">
+            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t39.30808-6/536267410_1149801450538121_7295999059678406108_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeHvjN5b8fzIhD9TBeFOSRu76ypljt24ORLrKmWO3bg5EmVufe4gzvaqRiFuH71trlFsy4SeGX9BSlLRadM-k6x4&_nc_ohc=acpkFhC9yYcQ7kNvwEv6b10&_nc_oc=AdoPGZgX5rJZdZo85gkgHb9TqGniGkSMJ5syY2rNImSZE-R7SeMFgqarI0_cDgLYM48&_nc_zt=23&_nc_ht=scontent.fmnl17-5.fna&_nc_gid=TW05XRaic940eIy7oGifDQ&_nc_ss=7a3a8&oh=00_Af2o_KjAR4ddD46cqaFgrlpatvoJC_hemk1Y77WXCzzydg&oe=69EEA28C" alt="Assembly 5" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="sandbox.js"></script>
+</body>
+</html>

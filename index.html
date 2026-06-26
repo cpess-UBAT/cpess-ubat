@@ -44,6 +44,7 @@
             --spacing-large: 2rem;
             --spacing-xlarge: 3rem;
             --spacing-xxlarge: 4rem;
+            --spacing-xxxlarge: 5rem;
 
         /* FONT FAMILY */
 
@@ -87,6 +88,8 @@
             transform: translateX(-50%);
             width: calc(100% - 80px);
             transition: all 0.3s ease-in;
+
+            z-index: 1;
         }
 
         nav:hover {
@@ -172,6 +175,11 @@
             flex-direction: column;
         }
 
+        main section {
+            scroll-margin-top: 100px;
+        }
+
+
         /* HERO SECTION */
 
         .hero-container {
@@ -241,54 +249,283 @@
         .discover-container {
             display: grid;
             height: 100vh;
-            margin: 0 40px;
+            padding: 0 40px;
 
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
             grid-template-areas: 
-            "title title about about"
-            "contact events events career"
+            "title title about contact"
+            ". events events career"
             "people subtitle subtitle career";
 
+            /* the . means empty cell */
+
         }
+
+        /* discovery app title */
 
         .dapp-title {
             grid-area: title;
             display: grid;
-            align-items: end;
+            align-items: start;
         }
 
         .dapp-title h1 {
             font-family: var(--font-primary);
             font-size: var(--font-size-supersuperlarge);
+            color: var(--color-secondary);
+
         }
+
+        /* discovery app subtitle  */
 
         .dapp-subtitle {
             grid-area: subtitle;
+            display: grid;
+            align-items: end;
+            justify-content: center;
+            margin-bottom: var(--spacing-xxlarge);
         }
+
+        .dapp-subtitle p {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-xlarge);
+            color: var(--color-secondary);
+            font-weight: var(--light);
+            font-style: italic;
+        }
+
+        /* discover app box format  */
+
+        .app-card {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .app-card:hover {
+            background-color: #d9d9d942;
+            backdrop-filter: blur(2px);
+        }
+
+        .app-icon {
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .app-icon img {
+            max-width: 64px;
+        }
+
+        .app-name {
+            font-family: var(--font-secondary);
+        }
+
+        /* discovery app about */
 
         .dapp-about {
             grid-area: about;
+            margin: auto;
         }
 
+    
         .dapp-events {
             grid-area: events;
+            display: grid;
+            margin: auto;
         }
 
         .dapp-career {
             grid-area: career;
+            display: grid;
+            margin: auto;
         }
 
         .dapp-people {
             grid-area: people;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: var(--spacing-xxlarge);
         }
 
         .dapp-contact {
             grid-area: contact;
+            margin: auto;
         }
 
+        /* CONTACT CONTAINER  */
 
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "concept cta";
+            
+        }
 
+        .concept-board {
+            grid-area: concept;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: 
+            ". . . . ."
+            "algorithm algorithm . creativity creativity"
+            ". concept concept concept ."
+            ". logic . analysis ."
+            ". . . . .";
+        }
+
+        .concept-main {
+            grid-area: concept;
+            text-align: center;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-superlarge);
+            font-weight: var(--bold);
+            color: var(--color-secondary);
+
+        }
+
+        .concept-sub1 {
+            grid-area: creativity;
+            text-align: center;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+            font-weight: var(--light);
+            color: var(--color-secondary);
+        }
+
+        .concept-sub2 {
+            grid-area: analysis;
+            text-align: center;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+            font-style: italic;
+            color: var(--color-secondary);
+
+        }
+
+        .concept-sub3 {
+            grid-area: algorithm;
+            text-align: center;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+            font-weight: var(--extra-bold);
+            color: var(--color-secondary);
+
+        }
+
+        .concept-sub4 {
+            grid-area: logic;
+            text-align: center;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-xxlarge);
+            font-weight: var(--regular);
+            color: var(--color-secondary);
+
+        }
+
+        .concept {
+            cursor: default;
+            transition: all 0.3s ease-out;
+        }
+
+        .concept:hover {
+            color: var(--color-primary);
+            text-shadow: 0 8px 32px rgba(255, 0, 0, 0.15);
+
+        }
+
+        .contact-cta {
+            grid-area: cta;
+
+            display: flex;
+            flex-direction: column;
+            margin: 0 var(--spacing-xxxlarge);
+            gap: var(--spacing-medium);
+
+        }
+
+        .contact-cta input, .contact-cta textarea {
+            font-family: var(--font-secondary);
+        }
+
+        .cta-title h1 {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-xxlarge);
+            color: var(--color-secondary);
+        }
+
+        .cta-name {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-large);
+            justify-content: space-between;
+        }
+
+        .cta-name-left {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+        }
+
+        .cta-name-right {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+
+        }
+
+        .cta-email {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+
+        }
+
+        .cta-message {
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-large);
+
+        }
+
+        .text-input {
+            height: 5vh;
+            border: 2px solid var(--color-accent);
+            border-radius: 5px;
+            padding: 8px 12px;
+        }
+
+        .msg-box {
+            height: 20vh;
+            border: 2px solid var(--color-accent);
+            border-radius: 5px;
+            text-align: start;
+            padding: 8px 12px;
+            resize: none;
+            text-justify: auto;
+
+        }
+
+        .cta-btn {
+            border: none;
+            background-color: var(--color-secondary);
+            font-size: var(--font-size-large);
+
+            color: var(--color-bg);
+            padding: 20px 10px;
+            border-radius: 5px;
+        }
 
         /* FOOTER  */
 
@@ -327,6 +564,7 @@
                 <button id="whats-new-btn" class="hero-btn">What's New?</button>
             </div>
         </section>
+        
         <section id="discover"  class="discover-container">
             <div class="dapp-title">
                 <h1>DISCOVER</h1>
@@ -336,64 +574,68 @@
             </div>
             <div class="dapp-about">
                 <div class="app-card">
-                    <div class="app-icon"></div>
+                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">About</p>
                 </div>
             </div>
             <div class="dapp-events">
                 <div class="app-card">
-                    <div class="app-icon"></div>
+                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Events</p>
                 </div>
             </div>
             <div class="dapp-career">
                 <div class="app-card">
-                    <div class="app-icon"></div>
+                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Career</p>
                 </div>
             </div>
             <div class="dapp-people">
                 <div class="app-card">
-                    <div class="app-icon"></div>
+                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Advisers</p>
                 </div>
                 <div class="app-card">
-                    <div class="app-icon"></div>
+                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Members</p>
                 </div>
             </div>
             <div class="dapp-contact">
                 <div class="app-card">
-                    <div class="app-icon"></div>
+                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Contact Us</p>
                 </div>
             </div>
         </section>
         <section id="contact"  class="contact-container">
             <div class="concept-board">
-                <h1 class="concept-main">CONCEPT</h1>
-                <p class="concept-sub1">cREATIVITY</p>
-                <p class="concept-sub2">ANALYSIS</p>
-                <p class="concept-sub3">Algorithm</p>
-                <p class="concept-sub4">logic</p>
+                <h1 class="concept-main concept">CONCEPT</h1>
+                <p class="concept-sub1 concept">cREATIVITY</p>
+                <p class="concept-sub2 concept">ANALYSIS</p>
+                <p class="concept-sub3 concept">Algorithm</p>
+                <p class="concept-sub4 concept">logic</p>
             </div>
             <div class="contact-cta">
                 <div class="cta-title">
                     <h1>Contact Us</h1>
                 </div>
                 <div class="cta-name">
-                    <label for="cta-fname">First Name</label>
-                    <input type="text" name="cta-fname" id="cta-fname" placeholder="Juan">
-                    <label for="cta-lname">Last Name</label>
-                    <input type="text" name="cta-lname" id="cta-lname" placeholder="Dela Cruz">
+                    <div class="cta-name-left">
+                        <label for="cta-fname">First Name</label>
+                        <input type="text" name="cta-fname" id="cta-fname" class="text-input" placeholder="Juan">
+                    </div>
+                    <div class="cta-name-right">
+                        <label for="cta-lname">Last Name</label>
+                        <input type="text" name="cta-lname" id="cta-lname" class="text-input" placeholder="Dela Cruz">
+                    </div>
                 </div>
                 <div class="cta-email">
                     <label for="cta-emailadd">Email address</label>
-                    <input type="text" name="cta-emailadd" id="cta-emailadd" placeholder="juandelacruz@mailname.com">
+                    <input type="text" name="cta-emailadd" id="cta-emailadd" class="text-input" placeholder="juandelacruz@mailname.com">
                 </div>
                 <div class="cta-message">
                     <label for="cta-mess">Message</label>
-                    <input type="text" name="cta-mess" id="cta-mess" placeholder="Enter your question or message">
+                    <textarea name="cta-mess" id="cta-mess" class="msg-box" placeholder="Enter your question or message"></textarea>
                 </div>
                 <button id="cta-submit-btn" class="cta-btn">Submit</button>
             </div>

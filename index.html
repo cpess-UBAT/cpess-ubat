@@ -34,7 +34,8 @@
             --font-size-xlarge: 1.5rem;
             --font-size-xxlarge: 2.5rem;
             --font-size-xxxlarge: 3rem;
-            --font-size-superlarge: 5rem;
+            --font-size-superlarge: 4rem;
+            --font-size-supersuperlarge: 7rem;
 
         /* SPACING AND PADDING */
 
@@ -49,6 +50,17 @@
             --font-hero: "Zen Dots", sans-serif;
             --font-primary: "Hanken Grotesk", sans-serif;
             --font-secondary: "Inter", sans-serif;
+
+            /* Font Weights */
+            --thin: 100;
+            --extra-light: 200;
+            --light: 300;
+            --regular: 400;
+            --medium: 500;
+            --semi-bold: 600;
+            --bold: 700;
+            --extra-bold: 800;
+            --black: 900;
 
         }
 
@@ -70,7 +82,7 @@
 
             /* center the nav */
             position: fixed;
-            top: 40px;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
             width: calc(100% - 80px);
@@ -112,25 +124,173 @@
             text-decoration: none;
             color: var(--color-secondary);
             font-family: var(--font-secondary);
+            font-weight: var(--regular);
+            transition: all 0.3s ease-out;
+        }
+
+        .nav-tab:hover {
+            color: var(--color-primary);
+            font-weight: var(--bold);
+            text-shadow: 0 8px 32px rgba(255, 0, 0, 0.15);
+
+        }
+
+        .acad-year {
+            font-family: var(--font-secondary);
+            font-weight: var(--light);
+            
         }
 
         .nav-btn {
             font-size: var(--font-size-small);
             padding: 10px 20px;
-            border: none;
+            border: 1px solid var(--color-accent);
             background-color: var(--color-primary);
             border-radius: 10px;
             color: var(--color-bg);
-            cursor: pointer;    
+            cursor: pointer;
 
             font-family: var(--font-primary);
+            font-weight: var(--regular);
+            font-size: medium;
+            transition: all 0.3s ease-in;
         }
+
+        .nav-btn:hover {
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-bg);
+            color: var(--color-primary);
+            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.15);
+
+        }
+
+        /* MAIN */
 
         main {
             background-color: var(--color-bg);
             display: flex;
             flex-direction: column;
         }
+
+        /* HERO SECTION */
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;    
+            align-self: center;
+            text-align: center;
+            gap: var(--spacing-large);
+            max-width: 1200px;
+        }
+
+        .hero-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-name {
+            font-family: var(--font-hero);
+            font-size: var(--font-size-superlarge);
+            color: var(--color-secondary);
+        }
+
+        .hero-name span {
+            color: var(--color-primary);
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-secondary);
+            color: var(--color-secondary);
+        }
+
+        .hero-subtitle span {
+            color: var(--color-primary);
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: var(--spacing-medium);
+        }
+
+        .hero-btn {
+            border: 1px solid var(--color-primary);
+            padding: 10px 20px;
+            background-color: var(--color-bg);
+            color: var(--color-primary);
+            border-radius: 10px;
+            cursor: pointer;
+
+            transition: all 0.3s ease-out;
+        }
+
+        .hero-btn:hover {
+            border: 1px solid var(--color-bg);
+            background-color: var(--color-primary);
+            color: var(--color-bg);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+        }
+
+        /* DISCOVER SECTION  */
+
+        .discover-container {
+            display: grid;
+            height: 100vh;
+            margin: 0 40px;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            "title title about about"
+            "contact events events career"
+            "people subtitle subtitle career";
+
+        }
+
+        .dapp-title {
+            grid-area: title;
+            display: grid;
+            align-items: end;
+        }
+
+        .dapp-title h1 {
+            font-family: var(--font-primary);
+            font-size: var(--font-size-supersuperlarge);
+        }
+
+        .dapp-subtitle {
+            grid-area: subtitle;
+        }
+
+        .dapp-about {
+            grid-area: about;
+        }
+
+        .dapp-events {
+            grid-area: events;
+        }
+
+        .dapp-career {
+            grid-area: career;
+        }
+
+        .dapp-people {
+            grid-area: people;
+        }
+
+        .dapp-contact {
+            grid-area: contact;
+        }
+
+
+
+
+        /* FOOTER  */
 
         footer {
             background-color: var(--color-bg);
@@ -144,32 +304,32 @@
     <nav>
         <ul class="lnav">
             <li class="nav-li"><img src="/images/cpess-logo.png" alt="CPESS Logo" class="small-logo"></li>
-            <li class="nav-li"><a href="" class="nav-tab">About</a></li>
+            <li class="nav-li"><a href="#discover" class="nav-tab">Discover</a></li>
             <li class="nav-li"><a href="" class="nav-tab">Events</a></li>
             <li class="nav-li"><a href="" class="nav-tab">Career</a></li>
             <li class="nav-li"><a href="" class="nav-tab">Adviser</a></li>
             <li class="nav-li"><a href="" class="nav-tab">Members</a></li>
-            <li class="nav-li"><a href="" class="nav-tab">Contact Us</a></li>
+            <li class="nav-li"><a href="#contact" class="nav-tab">Contact Us</a></li>
         </ul>
         <ul class="rnav">
-            <li class="nav-li thin">A.Y. 2026 - 2027</li>
+            <li class="nav-li acad-year">A.Y. 2026 - 2027</li>
             <li class="nav-li"><button id="enroll-btn" class="nav-btn">ENROLL NOW</button></li>
         </ul>
     </nav>
     <main>
-        <section class="hero-container">
+        <section id="hero" class="hero-container">
             <div class="hero-title">
-                <h1 class="hero-name"><span class="hero-hi-name">Computer</span> Engineering Students' Society</h1>
-                <p class="hero-subtitle">Empowering the Future: Innovate, Integrate, Elevate with <span class="hero-hi-subtitle">Computer</span> Engineering</p>
+                <h1 class="hero-name"><span>Computer</span> Engineering Students' Society</h1>
+                <p class="hero-subtitle">Empowering the Future: Innovate, Integrate, Elevate with <span>Computer</span> Engineering</p>
             </div>
             <div class="hero-btns">
-                <button id="view-events-btn" class="hero btn">View Events</button>
-                <button id="whats-new-btn" class="hero btn">What's New?</button>
+                <button id="view-events-btn" class="hero-btn">View Events</button>
+                <button id="whats-new-btn" class="hero-btn">What's New?</button>
             </div>
         </section>
-        <section class="discover-container">
+        <section id="discover"  class="discover-container">
             <div class="dapp-title">
-                <h1 class="dapp-disc">DISCOVER</h1>
+                <h1>DISCOVER</h1>
             </div>
             <div class="dapp-subtitle">
                 <p class="dapp-quote">"Where hardware meets software, innovation begins."</p>
@@ -192,13 +352,11 @@
                     <p class="app-name">Career</p>
                 </div>
             </div>
-            <div class="dapp-advisers">
+            <div class="dapp-people">
                 <div class="app-card">
                     <div class="app-icon"></div>
                     <p class="app-name">Advisers</p>
                 </div>
-            </div>
-            <div class="dapp-members">
                 <div class="app-card">
                     <div class="app-icon"></div>
                     <p class="app-name">Members</p>
@@ -211,7 +369,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact-container">
+        <section id="contact"  class="contact-container">
             <div class="concept-board">
                 <h1 class="concept-main">CONCEPT</h1>
                 <p class="concept-sub1">cREATIVITY</p>

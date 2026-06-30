@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPESS UBat Web</title>
+    <title>CPESS UBat</title>
 
     <style>
 
@@ -311,6 +311,8 @@
         .app-card:hover {
             background-color: #d9d9d942;
             backdrop-filter: blur(2px);
+
+            cursor: pointer;
         }
 
         .app-icon {
@@ -630,23 +632,29 @@
         }
 
         /* TABLET */
-        @media (max-width: 1024px) {
+        @media (min-width: 768px) and (max-width: 1376px) {
+            
 
             nav {
-                grid-template-columns: 1fr;
-                gap: 1rem;
+                display: grid;
+                grid-template-columns: 1.2fr auto;
+                gap: 0.5rem;
                 width: calc(100% - 40px);
                 padding: 20px;
             }
 
             .lnav,
             .rnav {
-                justify-content: center;
+                display: flex;
+                flex-direction: row;
                 flex-wrap: wrap;
+                gap: var(--spacing-medium);
+                font-size: var(--font-size-medium);
             }
 
             .hero-container {
                 padding: 0 40px;
+                height: 50vh;
             }
 
             .hero-name {
@@ -707,17 +715,27 @@
             .footer-lists {
                 justify-content: center;
             }
+        }
 
 
             /* MOBILE  */
 
-        @media (max-width: 768px) {
+        @media (max-width: 440px) {
 
             nav {
                 padding: 16px;
                 width: calc(100% - 20px);
                 top: 10px;
+                display: flex;
+                flex-direction: row;
             }
+
+            .nav-scrolled {
+                backdrop-filter: blur(32px);
+
+            }
+
+
 
             .lnav {
                 flex-direction: column;
@@ -800,7 +818,7 @@
 
         }
 
-        }
+        
 
 
     </style> 
@@ -811,10 +829,10 @@
         <ul class="lnav">
             <li class="nav-li"><img src="/images/cpess-logo.png" alt="CPESS Logo" class="small-logo"></li>
             <li class="nav-li"><a href="#discover" class="nav-tab">Discover</a></li>
-            <li class="nav-li"><a href="" class="nav-tab">Events</a></li>
-            <li class="nav-li"><a href="" class="nav-tab">Career</a></li>
-            <li class="nav-li"><a href="" class="nav-tab">Adviser</a></li>
-            <li class="nav-li"><a href="" class="nav-tab">Members</a></li>
+            <li class="nav-li"><a href="pages/events.html" class="nav-tab">Events</a></li>
+            <li class="nav-li"><a href="pages/career.html" class="nav-tab">Career</a></li>
+            <li class="nav-li"><a href="pages/advisers.html" class="nav-tab">Adviser</a></li>
+            <li class="nav-li"><a href="pages/members.html" class="nav-tab">Members</a></li>
             <li class="nav-li"><a href="#contact" class="nav-tab">Contact Us</a></li>
         </ul>
         <ul class="rnav">
@@ -842,36 +860,36 @@
                 <p class="dapp-quote">"Where hardware meets software, innovation begins."</p>
             </div>
             <div class="dapp-about">
-                <div class="app-card">
+                <div class="app-card" id="about-app">
                     <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">About</p>
                 </div>
             </div>
             <div class="dapp-events">
-                <div class="app-card">
+                <div class="app-card" id="events-app">
                     <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Events</p>
                 </div>
             </div>
             <div class="dapp-career">
-                <div class="app-card">
+                <div class="app-card" id="career-app">
                     <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Career</p>
                 </div>
             </div>
             <div class="dapp-people">
-                <div class="app-card">
+                <div class="app-card" id="advisers-app">
                     <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Advisers</p>
                 </div>
                 <div class="app-card">
-                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
+                    <div class="app-icon" id="members-app"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Members</p>
                 </div>
             </div>
             <div class="dapp-contact">
                 <div class="app-card">
-                    <div class="app-icon"><img src="images/cpess-logo.png" alt=""></div>
+                    <div class="app-icon" id="contact-app"><img src="images/cpess-logo.png" alt=""></div>
                     <p class="app-name">Contact Us</p>
                 </div>
             </div>
@@ -941,10 +959,74 @@
 
     <script>
 
-        const nav = document.querySelector("nav");
+        function navEffScroll() {
+            const nav = document.querySelector("nav");
 
-        window.addEventListener("scroll", () => {
-            nav.classList.toggle("nav-scrolled", window.scrollY > 50);
+            window.addEventListener("scroll", () => {
+                nav.classList.toggle("nav-scrolled", window.scrollY > 50);
+            });
+        }
+
+        //RUN navEffScroll
+        navEffScroll();
+
+        function heroBtns() {
+            const viewEventsBtn = document.getElementById("view-events-btn");
+            const whatsNewBtn = document.getElementById("whats-new-btn");
+
+            viewEventsBtn.addEventListener("click", () => {
+                window.location.href = "/pages/events.html";
+            })
+
+            // TO ADD MODAL FOR WHATS NEW 
+            // includes: new features & upcoming approved events
+
+        }
+
+        // RUN heroBtns
+        heroBtns()
+        
+        function clickApp() {
+            const aboutApp = document.getElementById("about-app");
+            const eventsApp = document.getElementById("events-app");
+            const careerApp = document.getElementById("career-app");
+            const advisersApp = document.getElementById("advisers-app");
+            const membersApp = document.getElementById("members-app");
+            const contactApp = document.getElementById("contact-app");
+        
+            aboutApp.addEventListener("click", () => {
+                window.location.href = "/pages/about.html";
+            });
+
+            eventsApp.addEventListener("click", () => {
+                window.location.href = "/pages/events.html";
+            });
+            
+            careerApp.addEventListener("click", () => {
+                window.location.href = "/pages/career.html";
+            });
+            
+            advisersApp.addEventListener("click", () => {
+                window.location.href = "/pages/advisers.html";
+            });
+            
+            membersApp.addEventListener("click", () => {
+                window.location.href = "/pages/members.html";
+            });
+            
+            contactApp.addEventListener("click", () => {
+                window.location.href = "/pages/contact.html";
+            });
+
+        }
+
+        // RUNS THE APP ROUTES ONCLICK
+        clickApp();
+
+        const aboutApp = document.getElementById("about-app");
+        
+        aboutApp.addEventListener("click", () => {
+            window.location.href = "/pages/about.html";
         });
 
     </script>
